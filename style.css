@@ -1,0 +1,35 @@
+/* Properties for body and html file */
+body, html {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    background-color: #4887b0;
+    text-align: center;
+    height: 100%;
+}
+/* Properties for game box */
+.game-box {
+    background: #e6ffe6;
+    box-shadow: -5px -5px 30px 5px rgb(51, 124, 3), 5px 5px 30px 5px rgb(3, 65, 90);;
+    border-radius: 25px;
+}
+/* Properties for asnwers */
+.answer-item {
+    background: rgb(226, 117, 14);
+    width: 90%;
+    display: inline-block;
+    border-radius:8px;
+    padding: 3px;
+}
+/* Properties for Start button */
+#btn-start {
+    border:none;
+	padding:6px 0 6px 0;
+	border-radius:8px;
+	background:#1645c7;
+    font:bold 40px;
+	color:#fff;
+}
+
+#code-title {
+    text-align: center;
+    font-weight: bold;
+}

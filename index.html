@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links for bootstrap and style.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Webpage title -->
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <!--"container" -name of the division tag
+            "d-flex" -creates a flexbox container and transforms direct children into flex items 
+            "justify-content-center" -the justify-content property is a sub-property of the Flexible Box Layout module
+            "mt-5" margin top 
+        -->
+    <div class="container d-flex justify-content-center mt-5">
+
+        <!--"game-box" -name of the division tag
+            "col-lg-8" -stands for column large 
+            "p-4" -padding  
+        -->
+        <div class="game-box col-lg-8 p-4">
+
+            <!--"row" -In Bootstrap, the "row" class is used mainly to hold columns in it. 
+                Bootstrap divides each row into a grid of 12 virtual columns. 
+                In the following example, the col-md-6 div will have the width of 6/12 of the "row"s div, meaning 50%. 
+                "pb-4" -padding bottom 
+            -->
+            <div class="row pb-4">
+                <div class="col-lg-4">
+                    <!-- "h2" -tag used to define HTML heading -->
+                    <h2 class="quiz-title">Code Quiz</h2>
+                </div>
+
+                <!-- "hr" -tag defines a thematic break in an HTML page -->
+                <hr>
+
+                <div class="col-lg-4"></div>
+
+                <div class="col-lg-4">
+
+                    <!--"float-right" -specifies how an element should float
+                            "text-danger" -bootstrap also has some contextual classes that can be used to provide "meaning through colors"  
+                            "d-none" -hides an element 
+                            "timecounter" - 
+                            "span" -tag is an inline container used to mark up a part of a text, or a part of a document 
+                        -->
+                    <h4 class="float-right text-danger d-none" id="timecounter">Timer :<span id="timer">100</span></h4>
+                </div>
+            </div>
+
+            <!--id="quiz-questions"/id="title-item"/id="question-answers" -id related to script.js  
+                    "text-info" -bootstrap also has some contextual classes that can be used to provide "meaning through colors"
+                    "text-center" -indicates center-aligned text
+                    "mb-5" - margin bottom
+                -->
+            <div class="quiz-questions d-none" id="quiz-questions">
+                <h2 class="text-info  text-center" id="title-item"></h2>
+                <div class="answers mt-5 mb-5" id="question-answers"></div>
+                <h1 id="alert"></h1>
+
+            </div>
+
+            <!-- "flex-column" -to display the flex items vertically (on top of each other)
+                    id="info"/id="btn-start" -id related to script.js 
+                    "button" -create an button 
+                    "btn-primary"/"btn-lg" -bootstrap color and size for button
+                -->
+            <div class="btnstart d-flex  flex-column justify-content-center mt-8 mb-10">
+                <p id="info"><strong>Try it now -> test you limit</strong>
+                    <br>
+                    Every incorrect answer will penalize your score time by 10 seconds.
+                </p>
+                <button class="btn btn-primary btn-lg" id="btn-start">Start Quiz</button>
+            </div>
+
+            <!-- id="btnScore"/id="addscore"/id="score"/id="inputScore" -id related to script.js 
+                "d-block" -make an element into a block element
+                 "input-group"  -class is a container to enhance an input by adding an icon, text or a 
+                                button in front or behind the input field as a "help text"
+                "input-group-append" -to add it behind the input -->
+            <div class="input-group mb-3 d-none" id="addscore">
+                <h5 class="d-block"><span id="score"></span></h5>
+                <input type="text" class="form-control" placeholder="Enter your initials:" id="inputScore"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="input-group-text btn btn-primary" id="btnScore">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scrypt.js"></script>
+
+</body>
+
+</html>

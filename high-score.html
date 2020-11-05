@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links for bootstrap and style.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Webpage title -->
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <!--"container" -name of the division tag
+            "d-flex" -creates a flexbox container and transforms direct children into flex items 
+            "justify-content-center" -the justify-content property is a sub-property of the Flexible Box Layout module
+            "mt-5" margin top 
+        -->
+    <div class="container d-flex justify-content-center mt-5">
+
+        <!--"game-box" -name of the division tag
+            "col-lg-8" -stands for column large 
+            "p-4" -padding 
+        -->
+        <div class="game-box col-lg-8 p-4">
+
+            <!--"row" -In Bootstrap, the "row" class is used mainly to hold columns in it. 
+                Bootstrap divides each row into a grid of 12 virtual columns. 
+                In the following example, the col-md-6 div will have the width of 6/12 of the "row"s div, meaning 50%. 
+            -->
+            <div class="row">
+                <div class="col-4"> </div>
+
+                <!-- id="highScoresList"/id="backButton"/id="clearScores" -ids related to high-score.js  -->
+                <div id="highScoresDiv" class="col-12">
+                    <h1 id="scoresArea">High Scores</h1>
+                    <div id="highScoresList"></div>
+
+                    <button class="btn btn-primary" id="playAgain">Play Again</button>
+                    <button class="btn btn-primary" id="resetScores">Reset Scores</button>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="high-score.js"></script>
+
+</body>
+
+</html>
